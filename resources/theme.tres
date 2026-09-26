@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://dlvqu8wgt2a0l"]
+
+[ext_resource type="FontFile" uid="uid://clya564f0nuli" path="res://fonts/DM Mono/DMMono-Medium.ttf" id="1_d4nwg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ct1h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_886mr"]
+bg_color = Color(0.047557652, 0.047557652, 0.047557607, 1)
+
+[resource]
+TextEdit/constants/caret_width = 2
+TextEdit/constants/line_spacing = 2
+TextEdit/font_sizes/font_size = 13
+TextEdit/fonts/font = ExtResource("1_d4nwg")
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_7ct1h")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_886mr")

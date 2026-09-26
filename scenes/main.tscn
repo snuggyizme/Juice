@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://csy8r200e1f7g"]
+
+[ext_resource type="PackedScene" uid="uid://bg4futg6h6k16" path="res://scenes/tab.tscn" id="1_0wfyh"]
+[ext_resource type="Theme" uid="uid://dlvqu8wgt2a0l" path="res://resources/theme.tres" id="1_o5qli"]
+
+[node name="Control" type="Control" unique_id=1994392008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=713928111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=541035958]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="RHS" type="VBoxContainer" parent="HBoxContainer" unique_id=527804197]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 1
+
+[node name="TopBar" type="PanelContainer" parent="HBoxContainer/RHS" unique_id=1192374694]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/RHS/TopBar" unique_id=608221171]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RHS/TopBar/ScrollContainer" unique_id=388543166]
+layout_mode = 2
+
+[node name="Button" parent="HBoxContainer/RHS/TopBar/ScrollContainer/HBoxContainer" unique_id=1963597676 instance=ExtResource("1_0wfyh")]
+layout_mode = 2
+
+[node name="Button2" parent="HBoxContainer/RHS/TopBar/ScrollContainer/HBoxContainer" unique_id=320662272 instance=ExtResource("1_0wfyh")]
+layout_mode = 2
+
+[node name="Button3" parent="HBoxContainer/RHS/TopBar/ScrollContainer/HBoxContainer" unique_id=1461065039 instance=ExtResource("1_0wfyh")]
+layout_mode = 2
+
+[node name="Button4" parent="HBoxContainer/RHS/TopBar/ScrollContainer/HBoxContainer" unique_id=1635945469 instance=ExtResource("1_0wfyh")]
+layout_mode = 2
+
+[node name="InfoBar" type="PanelContainer" parent="HBoxContainer/RHS" unique_id=627042414]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/RHS/InfoBar" unique_id=2048796866]
+layout_mode = 2
+text = "Ln 42, Col 153     GDScript         2 Err, 0 Warn"
+fit_content = true
+
+[node name="Code" type="PanelContainer" parent="HBoxContainer/RHS" unique_id=1079133112]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CodeEdit" type="CodeEdit" parent="HBoxContainer/RHS/Code" unique_id=1059973392]
+layout_mode = 2
+theme = ExtResource("1_o5qli")
+wrap_mode = 1
+virtual_keyboard_enabled = false
+scroll_smooth = true
+scroll_past_end_of_file = true
+minimap_draw = true
+minimap_width = 100
+symbol_lookup_on_click = true
+symbol_tooltip_on_hover = true
+line_folding = true
+gutters_draw_line_numbers = true
+gutters_zero_pad_line_numbers = true
+gutters_line_numbers_min_digits = 2
+indent_automatic = true
+auto_brace_completion_enabled = true
+auto_brace_completion_highlight_matching = true
+
+[node name="Terminal" type="PanelContainer" parent="HBoxContainer/RHS" unique_id=2050900796]
+layout_mode = 2

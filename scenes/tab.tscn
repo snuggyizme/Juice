@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bg4futg6h6k16"]
+
+[ext_resource type="Theme" uid="uid://dlvqu8wgt2a0l" path="res://resources/theme.tres" id="1_ivfkk"]
+
+[node name="Button" type="Button" unique_id=1963597676]
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("1_ivfkk")
+text = "My Document"
