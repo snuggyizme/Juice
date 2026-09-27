@@ -2,6 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://dlvqu8wgt2a0l" path="res://resources/theme.tres" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dmuupry541g0i" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://dklfb63sx0vm0" path="res://sprites/icons/gd.png" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://da5knsbuykgca" path="res://sprites/icons/gdshader.png" id="3_jyhfs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sugp2"]
 content_margin_left = 4.0
@@ -9,7 +11,7 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 bg_color = Color(0.1148968, 0.11489681, 0.1148968, 1)
 
-[node name="Main" type="Control" unique_id=1994392008]
+[node name="Main" type="Control" unique_id=1994392008 node_paths=PackedStringArray("tabBar", "codeEdit")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +19,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sugp2")
+icons = Dictionary[String, Texture2D]({
+"gd": ExtResource("2_jyhfs"),
+"gdshader": ExtResource("3_jyhfs")
+})
+tabBar = NodePath("HBoxContainer/RHS/TopBar/TabBar")
+codeEdit = NodePath("HBoxContainer/RHS/Code/CodeEdit")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=713928111]
 layout_mode = 1
@@ -43,12 +51,10 @@ layout_mode = 2
 theme = ExtResource("1_o5qli")
 theme_override_styles/panel = SubResource("StyleBoxFlat_sugp2")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/RHS/TopBar" unique_id=608221171]
+[node name="TabBar" type="TabBar" parent="HBoxContainer/RHS/TopBar" unique_id=2053815458]
 layout_mode = 2
-horizontal_scroll_mode = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/RHS/TopBar/ScrollContainer" unique_id=388543166]
-layout_mode = 2
+tab_close_display_policy = 1
+drag_to_rearrange_enabled = true
 
 [node name="InfoBar" type="PanelContainer" parent="HBoxContainer/RHS" unique_id=627042414]
 custom_minimum_size = Vector2(350, 0)
@@ -94,4 +100,7 @@ file_mode = 1
 access = 2
 use_native_dialog = true
 
+[connection signal="tab_changed" from="HBoxContainer/RHS/TopBar/TabBar" to="." method="_onTabBarTabChanged"]
+[connection signal="tab_close_pressed" from="HBoxContainer/RHS/TopBar/TabBar" to="." method="_onTabBarTabClosed"]
+[connection signal="text_changed" from="HBoxContainer/RHS/Code/CodeEdit" to="." method="_onCodeEditTextChanged"]
 [connection signal="files_selected" from="FileDialog" to="." method="_onFilesSelected"]

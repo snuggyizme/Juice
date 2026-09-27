@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dlvqu8wgt2a0l"]
 
 [ext_resource type="FontFile" uid="uid://clya564f0nuli" path="res://fonts/DM Mono/DMMono-Medium.ttf" id="1_d4nwg"]
+[ext_resource type="Texture2D" uid="uid://bkn02tmm0ge6u" path="res://sprites/x.png" id="2_7ct1h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4nwg"]
 content_margin_left = 2.0
@@ -49,6 +50,10 @@ content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.1148968, 0.11489681, 0.1148968, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyhfs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbgi4"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ct1h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_886mr"]
@@ -62,6 +67,11 @@ Button/styles/hover = SubResource("StyleBoxFlat_7ct1h")
 Button/styles/normal = SubResource("StyleBoxFlat_b751m")
 Button/styles/pressed = SubResource("StyleBoxFlat_owntx")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_0wfyh")
+TabBar/font_sizes/font_size = 12
+TabBar/fonts/font = ExtResource("1_d4nwg")
+TabBar/icons/close = ExtResource("2_7ct1h")
+TabBar/styles/button_highlight = SubResource("StyleBoxEmpty_jyhfs")
+TabBar/styles/button_pressed = SubResource("StyleBoxEmpty_tbgi4")
 TextEdit/constants/caret_width = 2
 TextEdit/constants/line_spacing = 2
 TextEdit/font_sizes/font_size = 13
