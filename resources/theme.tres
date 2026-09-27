@@ -3,6 +3,8 @@
 [ext_resource type="FontFile" uid="uid://clya564f0nuli" path="res://fonts/DM Mono/DMMono-Medium.ttf" id="1_d4nwg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4nwg"]
+content_margin_left = 2.0
+content_margin_right = 2.0
 bg_color = Color(0.40306062, 0.15934822, 0.21465072, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -11,6 +13,8 @@ corner_radius_bottom_left = 12
 corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ct1h"]
+content_margin_left = 2.0
+content_margin_right = 2.0
 bg_color = Color(0.41981313, 0.41981313, 0.4198131, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -19,7 +23,19 @@ corner_radius_bottom_left = 3
 corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b751m"]
+content_margin_left = 2.0
+content_margin_right = 2.0
 bg_color = Color(0.07683595, 0.07683576, 0.0768358, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_owntx"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0.6748146, 0.67481464, 0.6748144, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -39,9 +55,12 @@ bg_color = Color(0.1148968, 0.11489681, 0.1148968, 1)
 bg_color = Color(0.047557652, 0.047557652, 0.047557607, 1)
 
 [resource]
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_d4nwg")
 Button/styles/disabled = SubResource("StyleBoxFlat_d4nwg")
 Button/styles/hover = SubResource("StyleBoxFlat_7ct1h")
 Button/styles/normal = SubResource("StyleBoxFlat_b751m")
+Button/styles/pressed = SubResource("StyleBoxFlat_owntx")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_0wfyh")
 TextEdit/constants/caret_width = 2
 TextEdit/constants/line_spacing = 2

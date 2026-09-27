@@ -2,8 +2,45 @@
 
 [ext_resource type="Theme" uid="uid://dlvqu8wgt2a0l" path="res://resources/theme.tres" id="1_ivfkk"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivfkk"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0.07683595, 0.07683576, 0.0768358, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehfsu"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0.6748146, 0.67481464, 0.6748144, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8pty"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8jpb"]
+content_margin_left = 2.0
+content_margin_right = 2.0
+bg_color = Color(0.40306062, 0.15934822, 0.21465072, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_detail = 1
+
 [node name="Button" type="Button" unique_id=1963597676]
+custom_minimum_size = Vector2(40, 20)
 offset_right = 8.0
 offset_bottom = 8.0
 theme = ExtResource("1_ivfkk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ivfkk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ehfsu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b8pty")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_f8jpb")
 text = "My Document"
